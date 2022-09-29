@@ -1,9 +1,15 @@
-const counterValue = 0;
-function decrement(){
+let  counterValue = 0;
+const incrementEl = document.querySelector('[data-action="increment"]');
+const decrementEl = document.querySelector('[data-action="decrement"]');
+const counterEl = document.querySelector('#value');
+
+decrementEl.addEventListener('click', () => {
 	counterValue -=1 ;
-  document.getElementById('value').innerHTML = counterValue;
-}
-function increment(){
+  
+  counterEl.textContent = counterValue;
+});
+ incrementEl.addEventListener('click', () => {
 	counterValue += 1;
-  document.getElementById('value').innerHTML = counterValue;
-}
+  
+  counterEl.textContent = counterValue;
+})
