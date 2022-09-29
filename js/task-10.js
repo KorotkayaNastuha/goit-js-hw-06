@@ -12,7 +12,7 @@ createEl.addEventListener('click', createBoxes);
 
 function createBoxes(amount) {
   const boxes = [];
-  amount = amountEl.value
+ 
   for (let i = 0; i < amount; i+=1) {
     const elem = document.createElement('div');
     elem.style.background = getRandomHexColor()
@@ -21,7 +21,7 @@ function createBoxes(amount) {
     boxes.push(elem);
    
   }
-  boxesEl.appendChild(boxes);
+  return boxes
 }
 function destroyBoxes() {
   boxesEl.innerHTML = "";
