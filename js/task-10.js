@@ -21,10 +21,10 @@ function createBoxes(amount) {
     boxes.push(elem);
    
   }
-  return boxes
+  boxesEl.append(...boxes);
 }
 function destroyBoxes() {
-  boxesEl.innerHTML = "";
+  boxesEl.innerHTML = '';
   amountEl.value = 0;
   
 }
